@@ -68,7 +68,6 @@
     </div>
 </div>
 
-<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVnb28iLCJhIjoiY2tiaWhteHlvMGZkbzMwbGowdGUxbHpqZiJ9.R83udeP1wlndwjFvYBT5ZQ';
     var map = new mapboxgl.Map({
@@ -86,13 +85,13 @@
 	    '2019'
     ];
 
-    function filterBy(month) {
-        var filters = ['==', 'month', month];
+    function filterBy(year) {
+        var filters = ['==', 'Year', year];
         map.setFilter('earthquake-circles', filters);
         map.setFilter('earthquake-labels', filters);
 
         // Set the label to the month
-        document.getElementById('month').textContent = months[month];
+        document.getElementById('month').textContent = years[year];
     }
 
     map.on('load', function() {
@@ -107,13 +106,13 @@
                     return d;
                 });
 
-                map.addSource('winners', {
+                map.addSource('Winner', {
                     'type': 'geojson',
                     data: './convertcsv.geojson'
                 });
 
-               // map.addLayer({
-                   // 'id': 'earthquake-circles',
+               map.addLayer({
+                   'id': 'winners',
                     'type': 'circle',
                     'source': 'Winner',
                     'paint': {
