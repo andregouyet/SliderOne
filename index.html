@@ -70,7 +70,7 @@
 
 <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>
-	mapboxgl.accessToken = 'pk.eyJ1Ijoic3ZjLW9rdGEtbWFwYm94LXN0YWZmLWFjY2VzcyIsImEiOiJja2IwbTg1a24wNjgxMndyeG95OHU4a3k3In0.EZXLhvdfH5M0DmlXk9O-ow';
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVnb28iLCJhIjoiY2tiaWhteHlvMGZkbzMwbGowdGUxbHpqZiJ9.R83udeP1wlndwjFvYBT5ZQ';
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
@@ -96,25 +96,14 @@
     }
 
     map.on('load', function() {
-        // Data courtesy of http://earthquake.usgs.gov/
-        // Query for significant earthquakes in 2015 URL request looked like this:
-        // http://earthquake.usgs.gov/fdsnws/event/1/query
-        //    ?format=geojson
-        //    &starttime=2015-01-01
-        //    &endtime=2015-12-31
-        //    &minmagnitude=6'
-        //
-        // Here we're using d3 to help us make the ajax request but you can use
-        // Any request method (library or otherwise) you wish.
-        //d3.json(
-            //'https://docs.mapbox.com/mapbox-gl-js/assets/significant-earthquakes-2015.geojson',
+      
             function(err, data) {
                 if (err) throw err;
 
                 // Create a month property value based on time
                 // used to filter against.
                 data.features = data.features.map(function(d) {
-                    d.properties.month = new Date(d.properties.time).getMonth();
+                    d.properties.year = new Date(d.properties.time).getYear();
                     return d;
                 });
 
@@ -126,7 +115,7 @@
                // map.addLayer({
                    // 'id': 'earthquake-circles',
                     'type': 'circle',
-                    'source': 'winners',
+                    'source': 'Winner',
                     'paint': {
                         'circle-color': [
                             'interpolate',
@@ -151,9 +140,9 @@
                 });
 
                 map.addLayer({
-                    'id': 'earthquake-labels',
-                    'type': 'symbol',
-                    'source': 'earthquakes',
+                    'id': 'City',
+                    'type': 'label',
+                    'source': 'City',
                     'layout': {
                         'text-field': [
                             'concat',
