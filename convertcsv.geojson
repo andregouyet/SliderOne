@@ -1,0 +1,65 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Year":2015,
+    "Winner":"Chelsea",
+    "City":"London"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 52.627124,-1.132278 ]
+    },
+    "properties": {
+    "Year":2016,
+    "Winner":"Leicester",
+    "City":"Leicester"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Year":2017,
+    "Winner":"Chelsea",
+    "City":"Leicester"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Year":2018,
+    "Winner":"Manchester City",
+    "City":"Manchester "
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Year":2019,
+    "Winner":"Manchester City",
+    "City":"Manchester "
+    }
+  }
+]
+}
