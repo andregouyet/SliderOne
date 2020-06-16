@@ -69,12 +69,13 @@
 </div>
 
 <script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVnb28iLCJhIjoiY2tiaWhteHlvMGZkbzMwbGowdGUxbHpqZiJ9.R83udeP1wlndwjFvYBT5ZQ';
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVnb28iLCJhIjoiY2thcjFvaWhjMGZreTJ5bGdmMjNoMWV2dCJ9.HNVsB_40E16ibK78cmjCXg'; //Mapbox token 
     var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/andregoo/ckb5kfjse34nn1io7pdx1be8v',
-        center: [51.4828682, 0.1936086],
-        zoom: 10
+      container: 'map', // container id
+      style: 'mapbox://styles/andregoo/ckb9v1pqi1dcv1hp797ij23sx', //stylesheet location
+      center: [-122.411464, 37.7852299], // starting position
+      zoom: 10,// starting zoom
+      transformRequest: transformRequest
     });
 
     var years = [
