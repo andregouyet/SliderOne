@@ -118,15 +118,15 @@
                     return d;
                 });
 
-                map.addSource('earthquakes', {
+                map.addSource('winners', {
                     'type': 'geojson',
-                    data: data
+                    data: './convertcsv.geojson'
                 });
 
                // map.addLayer({
                    // 'id': 'earthquake-circles',
                     'type': 'circle',
-                    'source': 'earthquakes',
+                    'source': 'winners',
                     'paint': {
                         'circle-color': [
                             'interpolate',
