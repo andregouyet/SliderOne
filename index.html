@@ -56,9 +56,9 @@
 
 <div class="map-overlay top">
     <div class="map-overlay-inner">
-        <h2>Significant earthquakes in 2015</h2>
-        <label id="month"></label>
-        <input id="slider" type="range" min="0" max="11" step="1" value="0" />
+        <h2>EPL Victories 2015-2019</h2>
+        <label id="year"></label>
+        <input id="slider" type="range" min="0" max="4" step="1" value="0" />
     </div>
     <div class="map-overlay-inner">
         <div id="legend" class="legend">
@@ -78,19 +78,12 @@
         zoom: 0.5
     });
 
-    var months = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December'
+    var years = [
+        '2015',
+	    '2016',
+	    '2017',
+	    '2018',
+	    '2019'
     ];
 
     function filterBy(month) {
